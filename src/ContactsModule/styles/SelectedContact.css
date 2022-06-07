@@ -1,0 +1,121 @@
+*{
+    box-sizing: border-box;
+}
+
+.selected-contact {
+    position: absolute;
+    background-color: black;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+   
+}
+
+.no-cancel-box {
+    display: none;
+}
+
+.cancel-box {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: 150px;
+
+}
+
+
+.selected-contact-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 500px;
+    padding-bottom: 10px;
+    background-color: rgb(236, 236, 236);
+    z-index: 2;
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    
+}
+
+.selected-contact-header {
+    padding: 10px;
+    background-color: lightgray;
+    height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: start;
+}
+
+.selected-contact-header-contact-data {
+   padding-left: 5px;
+   font-weight: bold;
+}
+
+.selected-contact-header-close-btn {
+    margin-left: auto;
+    background-color: lightgrey;
+    border: none;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.selected-contact-container-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    margin: 0 auto;
+    
+}
+
+.selected-contact-content-img {
+    width: 100px;
+    height: 100px;
+    background-color: lightgray;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.selected-contact-content-form {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-self: center;
+
+}
+
+input {
+    width: 250px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    border: none;
+    padding: 5px;
+    position: relative;
+}
+.selected-contact-content-form-btn, .selected-contact-content-cancel-box-btn {
+    align-self: flex-end;
+    background-color: lightskyblue;
+    border-radius: 8px;
+    border: none;
+    padding: 8px 15px;
+    color: white;
+    margin-right: 10px;
+    margin-bottom: 10px;
+
+}
+
+
+
+
+.selected-contact-content-form-label {
+    align-self: start;
+    font-size: 10px;
+    margin-bottom: 3px;
+}
+
+.selected-contact-content-cancel-box-message {
+    text-align: centre;
+}

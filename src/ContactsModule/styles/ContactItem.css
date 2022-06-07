@@ -1,0 +1,37 @@
+.contact-item-container {
+    display: flex;
+    justify-content: start;
+    padding: 15px;
+    background-color: lightgray;
+    width: 300px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.content-container {
+    width: 200px;
+    display: flex;
+    font-display: column;
+    flex-wrap: wrap;
+    justify-content: start;
+
+}
+
+.img-place {
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    background-color: darkgrey;
+    margin-right: 10px;
+}
+
+.btn-area {
+    display: flex;
+    font-display: column;
+}
+
+.btn-delete, .btn-edit {
+    background-color: lightgrey;
+    border: none;   
+}
+

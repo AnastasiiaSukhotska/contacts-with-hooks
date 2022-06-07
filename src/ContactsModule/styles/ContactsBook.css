@@ -1,0 +1,16 @@
+*{
+    box-sizing: border-box;
+}
+
+.contact-book-container{
+    height: 100%;
+    width: 100%;
+    background-color: #F0F8FF;
+    padding-top: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  
+}
+
