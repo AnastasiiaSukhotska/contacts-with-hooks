@@ -1,5 +1,5 @@
 import { ContactsList } from "./components/ContactsList";
-import {useState} from 'react';
+import {useCallback, useEffect, useState} from 'react';
 import { SelectedContact } from "./components/SelectedContact";
 import { Search } from "./components/Search";
 import './styles/ContactsBook.css';
@@ -28,6 +28,11 @@ export function ContactsBook () {
     const [contacts, setContacts] = useState(contactsList);
     const [showPopup, setShowPopup] = useState(false);
     const [editableContact, setEditableContact] = useState();
+    const [searchValue, setSearchValue] = useState('');
+
+    useEffect (() => {
+        setContacts(contactsList);
+    }, []);
    
     
     const onContactItemDeleteHandler = (id, e) => {
@@ -51,23 +56,9 @@ export function ContactsBook () {
         setShowPopup(false);
     }
 
-    const onSearchingHandler = (searchValue) => {
-        console.log(searchValue);
-       let filteredContacts = contacts.filter(contact => {
-           return contact.name.toLowerCase().includes(searchValue.toLowerCase()) 
-           || contact.surname.toLowerCase().includes(searchValue.toLowerCase())
-           ||contact.phoneNumber.toLowerCase().includes(searchValue.toLowerCase())
-       })
-       creatingNewContactList(filteredContacts);
+    const onSearchingHandler = (value) => {   
+       setSearchValue(value);       
     }
-
-    const creatingNewContactList = (value) => {
-        console.log(value);
-        setContacts (value);
-    }
- 
-           
-     
   
     return (
         <div className="contact-book-container">
@@ -77,6 +68,10 @@ export function ContactsBook () {
                  onContactItemDelete = {onContactItemDeleteHandler}
                  onContactEdit = {onContactItemEditHandler}
                  showPopup = {showPopup}
+                 onSearching = {onSearchingHandler}
+                 searchValue = {searchValue}
+                 
+                 
             />
             { showPopup 
             ?  <SelectedContact editableContact={editableContact} onEditComplete={onContactItemEditCompleteHandler} onCancelComplete={onCancelCompleteHandler}/>
